@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+    list-style: none;
+    text-decoration: none;
+}
+nav{
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.nav-toggle{
+    color: blue;
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-toggle:hover{
+    color: red;
+    transform: rotate(90deg);
+}
+.links a{
+    display: block;
+    color: brown;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+.links a:hover{
+    color: blue;
+}
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.show-link{
+    height: 12rem;
+}
+@media screen and (min-width:800px){
+    .nav-center{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .links{
+        display: flex;
+        height: auto;
+    }
+    .links a:hover{
+        display: block;
+        padding-left: 1.5rem;
+    }
+}
+</style>
+<body>
+    <nav>
+        <div class="nav-center">
+            <div class="nav-header">
+                <h1 class="logo">Logo</h1>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars">icon</i>
+                </button>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="navbar.js"></script>
+</body>
+</html>
